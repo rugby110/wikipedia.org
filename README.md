@@ -1,7 +1,7 @@
 # wikipedia.org
 API implemetation of www.wikipedia.org by @xyussanx
 
-Documentation :
+Official Documentation :
 
 [FULL] http://www.mediawiki.org/wiki/API:Main_page
 
