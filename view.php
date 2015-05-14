@@ -1,5 +1,5 @@
 <?php
-require_once('wikiwiko.php');
+require_once('wikiwiko.php');//main class
 $wiki = new wikiwiko();
 if(!empty($_GET['q']))
 {
@@ -7,46 +7,30 @@ if(!empty($_GET['q']))
 }else{
    $keyword = 'Liverpool F.C.';
 }
-$result = $wiki->showResult($keyword);
-$resultDec = json_decode($result);
 ?>
-<pre>
-   <?php
-   foreach($resultDec->query->pages as $v):
-      $pageid = $v->pageid;//get page id
-   endforeach;
-   ?>
-   <?php
-   $query = $resultDec->query->pages->$pageid->revisions;//get main data
-   foreach($query as $q):
-         $view = (array)$q;
-   endforeach;
-   ?>
-</pre>
 <html>
    <head>
       <title><?php echo $keyword;?></title>
    </head>
    <body>
+      <i>untuk percobaan lain, tambah parameter get contoh <code>url?q=Manchester F.C.</code> <br/><strong>setelah spasi awali dengan huruf besar</strong> </i>
       <h1>Tentang <?php echo str_replace('%20',' ',$keyword);?></h1>
+      <!-- gambar -->
       <p>
-         <strong>Singkat Cerita</strong><br/>
+         <?php
+         $src = $wiki->mainpicture($keyword);
+         ?>
+         <img src="<?php echo $src;?>" alt="<?php echo $keyword?>" style="width:200px" />
+      </p>
+      <!-- end of gambar -->
+      <!-- conten -->
+      <p>
+         <strong>Isi</strong><br/>
          <?php
          $singkat = $wiki->singkat($keyword);
-         $singkat = json_decode($singkat);
-         print_r($singkat);
-         echo $singkat->query->pages->$pageid->extract;
+         echo $singkat;
          ?>
       </p>
-      <p>
-         <strong>Sejarah</strong><br/>
-         <pre><?php
-         $lastview = $view['*'];
-         $sejarah = $wiki->getSejarah($lastview);
-         $sejarah =  substr($sejarah[1],0,1000);
-         // echo $sejarah;
-         // $wiki->styling($sejarah);//style
-         ?>
-      </p>
+      <!-- end of conten -->
    </body>
 </html>
