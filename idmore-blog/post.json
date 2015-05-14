@@ -1,0 +1,25 @@
+{
+   "post":[
+      {
+         "id":1,
+         "wikikey":"Japanese aircraft carrier Akagi",
+         "type":"Aircraft Carrier",
+         "title":"Japanese aircraft carrier Akagi",
+         "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at egestas purus. Quisque hendrerit enim sit amet nisi facilisis, ac ullamcorper mi laoreet. Nulla tincidunt et felis nec tristique. Curabitur a diam vel diam tincidunt mattis id ac nulla. Morbi ultrices imperdiet nisi in pharetra. Mauris eleifend in elit a malesuada. Sed ut arcu non tellus congue blandit vehicula congue lectus. In id congue nunc, eu finibus nulla. Proin tortor lacus, facilisis eu arcu lobortis, luctus tincidunt diam. Curabitur mollis nulla ligula, nec pretium diam eleifend egestas. Nullam tempus viverra sapien, in dictum velit ultrices a."
+      },
+      {
+         "id":2,
+         "wikikey":"Japanese destroyer Yūdachi",
+         "type":"Destroyer",
+         "title":"Japanese destroyer Yūdachi",
+         "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at egestas purus. Quisque hendrerit enim sit amet nisi facilisis, ac ullamcorper mi laoreet. Nulla tincidunt et felis nec tristique. Curabitur a diam vel diam tincidunt mattis id ac nulla. Morbi ultrices imperdiet nisi in pharetra. Mauris eleifend in elit a malesuada. Sed ut arcu non tellus congue blandit vehicula congue lectus. In id congue nunc, eu finibus nulla. Proin tortor lacus, facilisis eu arcu lobortis, luctus tincidunt diam. Curabitur mollis nulla ligula, nec pretium diam eleifend egestas. Nullam tempus viverra sapien, in dictum velit ultrices a."
+      },
+      {
+         "id":3,
+         "wikikey":"Japanese destroyer Fubuki (1927)",
+         "type":"Destroyer",
+         "title":"Japanese destroyer Yūdachi",
+         "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at egestas purus. Quisque hendrerit enim sit amet nisi facilisis, ac ullamcorper mi laoreet. Nulla tincidunt et felis nec tristique. Curabitur a diam vel diam tincidunt mattis id ac nulla. Morbi ultrices imperdiet nisi in pharetra. Mauris eleifend in elit a malesuada. Sed ut arcu non tellus congue blandit vehicula congue lectus. In id congue nunc, eu finibus nulla. Proin tortor lacus, facilisis eu arcu lobortis, luctus tincidunt diam. Curabitur mollis nulla ligula, nec pretium diam eleifend egestas. Nullam tempus viverra sapien, in dictum velit ultrices a."
+      }
+   ]
+}
