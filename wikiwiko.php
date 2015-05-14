@@ -30,7 +30,8 @@ class wikiwiko {
    public function singkat($keyword)//singkat cerita
    {
       //huruf pertama harus kapital
-      $apiurl = $this->url.'/w/api.php?action=query&prop=extracts&format=json&exintro=&titles=Liverpool%20F.C.';
+      $keyword = str_replace(' ','%20',$keyword);
+      $apiurl = $this->url.'/w/api.php?action=query&prop=extracts&format=json&exintro=&titles='.$keyword;
       $response = file_get_contents($apiurl);
       //decoding
       $content = json_decode($response);
