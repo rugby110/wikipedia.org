@@ -11,6 +11,9 @@ if(!empty($_GET['q']))
 <html>
    <head>
       <title><?php echo $keyword;?></title>
+      <style media="screen">
+         .thumb{width:100px;height:100px}
+      </style>
    </head>
    <body>
       <i>untuk percobaan lain, tambah parameter get contoh <code>url?q=Manchester F.C.</code> <br/><strong>setelah spasi awali dengan huruf besar</strong> </i>
@@ -23,6 +26,16 @@ if(!empty($_GET['q']))
          <img src="<?php echo $src;?>" alt="<?php echo $keyword?>" style="width:200px" />
       </p>
       <!-- end of gambar -->
+      <p>
+         <strong>gallery</strong><br/>
+         <?php
+         $gallery = $wiki->gallery($keyword);
+         foreach($gallery as $g):
+         $src = $wiki->mainpicture($g->title);
+         echo '<img class="thumb" src="'.$src.'" alt="" />';
+         endforeach;
+         ?>
+      </p>
       <!-- conten -->
       <p>
          <strong>Isi</strong><br/>

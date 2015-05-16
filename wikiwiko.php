@@ -27,7 +27,7 @@ class wikiwiko {
       endforeach;
       return $src;
    }
-   public function singkat($keyword)//singkat cerita
+   public function singkat($keyword)//sort story
    {
       //huruf pertama harus kapital
       $keyword = str_replace(' ','%20',$keyword);
@@ -41,5 +41,14 @@ class wikiwiko {
       $content = $p->extract;
       endforeach;
       return $content;
+   }
+   public function gallery($keyword)//fallery colection
+   {
+      //huruf pertama harus kapital
+      $keyword = str_replace(' ','%20',$keyword);
+      $apiurl = $this->url.'/w/api.php?action=query&list=allimages&ailimit=5&aifrom='.$keyword.'&aiprop=dimensions%7Cmime&format=json';
+      $response = file_get_contents($apiurl);
+      $response = json_decode($response);
+      return $response->query->allimages;
    }
 }

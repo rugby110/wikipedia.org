@@ -6,8 +6,18 @@ class post{
       $this->wikikey = $wikikey;
       $this->language = 'id';//option = id,en,etc
    }
+   //listing list
+   public function listing()
+   {
+
+   }
+   //single page
+   public function single($id)
+   {
+
+   }
    //get main thumb
-   public function mainThumb()
+   public function wikiMainThumb()
    {
       $keyword = str_replace(' ','%20',$this->wikikey);//convert to url support
       $apiurl = 'http://'$this->language.'wikipedia.org/w/api.php?action=query&titles='.$keyword.'&prop=pageimages&format=json&pithumbsize=500';
@@ -21,7 +31,7 @@ class post{
       return $src;
    }
    //get sort description
-   public function shortDescription()
+   public function wikiShortDescription()
    {
       //huruf pertama harus kapital
       $keyword = str_replace(' ','%20',$this->wikikey);
